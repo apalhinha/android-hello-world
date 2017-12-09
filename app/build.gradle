@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "info.trustzone.androidhelloworld"
+        applicationId 'info.trustzone.helloworld'
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    testOptions {
+        execution 'ANDROID_TEST_ORCHESTRATOR'
+    }
+
     productFlavors {
     }
 }
